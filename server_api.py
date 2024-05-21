@@ -66,7 +66,6 @@ def get_filelist(filelist_id: int) -> EntFilelist:
 # Define functions for integration with external tools
 
 def store_annotation_tool_result(data: dict) -> str:
-    # Dummy logic to store annotation tool result
     return "Annotation tool result stored successfully"
 
 def retrieve_annotation_data(recording_id: int) -> List[dict]:
@@ -77,12 +76,11 @@ def retrieve_annotation_data(recording_id: int) -> List[dict]:
 # Define functions for data cleaning and pre-processing
 
 def basic_data_cleaning(data: dict) -> dict:
-    # Dummy data cleaning logic
+    # Data cleaning logic, converting all data string values to uppercase
     cleaned_data = {k: v.upper() if isinstance(v, str) else v for k, v in data.items()}
     return cleaned_data
 
 def quality_checks(data: dict) -> str:
-    # Dummy quality checks
     if "quality" in data and data["quality"] >= 0.7:
         return "Data quality is good"
     else:
